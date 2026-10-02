@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,13 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^18.0.5",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.23.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
   },
   "devDependencies": {
+    "@types/node": "^26.6.4",
     "nodemon": "^3.1.14"
   }
 }

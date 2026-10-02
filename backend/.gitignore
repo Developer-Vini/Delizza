@@ -1,3 +1,5 @@
 node_modules
-
+generated
 .env
+node_modules/
+dist/
