@@ -1,19 +1,19 @@
 CREATE TABLE IF NOT EXISTS pizzas (
     id      SERIAL PRIMARY KEY,
     nome    TEXT NOT NULL,
-    descricao TEXT NOT NULL
+    descricao TEXT NOT NULL,
     preco NUMERIC(8,2) NOT NULL,
-    ativa   BOOLEAN NOT NULL DEFAULT TRUE
+    ativa   BOOLEAN NOT NULL DEFAULT TRUE,
 );
 
 CREATE TABLE IF NOT EXISTS pedidos (
-    id      SERIAL PRIMARY KEY
-    cliente TEXT NOT NULL
-    telefone TEXT NOT NULL
-    endereco    TEXT NOT NULL
-    itens   JSONB NOT NULL
+    id      SERIAL PRIMARY KEY,
+    cliente TEXT NOT NULL,
+    telefone TEXT NOT NULL,
+    endereco    TEXT NOT NULL,
+    itens   JSONB NOT NULL,
     total NUMERIC(8,2) NOT NULL,
-    criado_em TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    criado_em TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 );
 
 INSERT INTO pizzas (nome, descricao, preco) VALUES

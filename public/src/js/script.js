@@ -20,7 +20,7 @@ async function carregar() {
 
         pizzas = await r.json();
 
-        $('menu').innerHTML = pizzas.map(p => `
+        $('cardapio').innerHTML = pizzas.map(p => `
             <div class="pizza">
                 <div><h3>${p.nome}</h3><p>${p.descricao}</p></div>
                 <div style="text-align:right">
