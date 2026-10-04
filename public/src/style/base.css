@@ -1,1 +1,30 @@
-:rro
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', DM sans;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5
+}
+h2 {
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 0 0 16px;
+}
+
+button{
+    font: inherit;
+    cursor: pointer;
+}
+
+:focus-visible{
+    outline: 3px solid var(--majericao);
+    outline-offset: 2px;
+}
