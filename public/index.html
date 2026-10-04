@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>DELIZZA</h1>
+        <p>Thin-crust pizza, baked fresh. Choose, order, and we'll deliver.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Menu</h2>
+            <div class="cardapio"><p class="vazio">Loading menu...</p></div>
+        </section>
+
+        <aside>
+            <h2>Your order</h2>
+            <div class="carrinho"><p class="vazio">Add a pizza from the menu.</p></div>
+            <div class="total"><span>Total</span><span id="total">R$ 0,00</span></div>
+
+            <label for="cliente">Name</label>
+            <input id="cliente" autocomplete="name">
+            <label for="telefone">Phone</label>
+            <input id="telefone" type="tel" autocomplete="tel">
+            <label for="endereco">Street Address</label>
+            <input id="endereco" autocomplete="street-address">
+
+            <button class="enviar" id="enviar" disabled>Submit</button>
+            <div id="msg" role="status"></div>
+        </aside>
+    </main>
+    
+</body>
+</html>
