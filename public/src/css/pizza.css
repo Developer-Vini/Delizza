@@ -1,0 +1,47 @@
+.pizza {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    background: var(--card);
+    border: 2px solid var(--borda);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 12px
+}
+
+.pizza h3 {
+    margin: 0;
+    font-size: 1.1rem
+}
+
+.pizza p {
+    margin: 2px 0 0;
+    color: var(--suave);
+    font-size: .92rem
+}
+
+.preco {
+    font-weight: 700;
+    color: var(--manjericao);
+    white-space: nowrap
+}
+
+@media(prefers-color-scheme:dark) {
+    .preco {
+        color: var(--queijo)
+    }
+}
+
+.add {
+    background: var(--queijo);
+    color: var(--brasa);
+    border: 2px solid var(--brasa);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-weight: 700
+}
+
+.add:hover {
+    background: #ffd75e
+}
