@@ -1,18 +1,18 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const { Pool } = require('pg')
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false
-    }
- });
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
+});
+
 const app = express();
 
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -75,6 +75,8 @@ app.post('/api/pedidos', async (req, res) => {
 })
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log("Pizzaria rodando")
-})
+
+if (require.main === module) {
+  app.listen(process.env.PORT || 3000);
+}
+module.exports = app;
