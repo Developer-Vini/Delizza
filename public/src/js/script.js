@@ -52,3 +52,48 @@ function desenhar() {
     $('total').textContent = brl(total);
     $('enviar').disabled = carrinho.size === 0;
 }
+
+document.addEventListener('click', e => {
+    const t = e.target;
+    if(t.dataset.id) mudar(Number(t.dataset.id), 1);
+    if(t.dataset.mais) mudar(Number(t.dataset.mais), 1);
+    if(t.dataset.menos) mudar(Number(t.dataset.menos), -1)
+})
+
+$('enviar').addEventListener("click", async () => {
+    const msg = $('msg');
+    msg.className = ''; 
+    msg.textContent = '';
+    $('enviar').disabled = true;
+    try{
+        const r = await fetch('/api/pedidos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                cliente: $('cliente').value, 
+                telefone: $('telefone').value,
+                endereco: $('endereco').value,
+                itens: [...carrinho].map(([id, qtd]) => ({ id, qtd }))
+            })
+        });
+
+        if(!r.ok){
+            throw new Error(d.erro);
+        }
+        const d = await r.json();
+
+
+        carrinho.clear();
+        desenhar();
+        msg.className = 'msg ok';
+        msg.textContent = `Order #${d.id} sent! Total: ${brl(Number(d.total))}.`;
+    }catch(err){
+        msg.className = 'msg erro';
+        msg.textContent = err.message || 'The request could not be sent.';
+        $('enviar').disabled = carrinho.size === 0;
+    }
+})
+
+carregar()
