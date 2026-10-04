@@ -1,0 +1,33 @@
+label{
+    display: block;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    font: inherit;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.enviar{
+    width: 100%;
+    margin-top: 16px;
+    background-color: var(--tomate);
+    color: #fff;
+    border: 2px solid var(--brasa);
+    border-bottom: 10px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.enviar:disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
