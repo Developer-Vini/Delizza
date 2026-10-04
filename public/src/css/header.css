@@ -1,0 +1,21 @@
+header {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 255, .18) 50%, transparent 50%) 0 0/48px 48px, linear-gradient(rgba(255, 255, 255, .18) 50%, transparent 50%) 0, 0/48px 48px, var(--tomate);
+    color: #fff;
+    padding: 56px 20px 64px;
+    text-align: center;
+}   
+
+header h1{
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 9vw, 5rem);
+    line-height: 1;
+    text-shadow: 3px 3px 0 var(--brasa);
+}
+
+header p {
+    margin: 14px auto 0;
+    max-width: 30ch;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
