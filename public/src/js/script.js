@@ -78,11 +78,11 @@ $('enviar').addEventListener("click", async () => {
                 itens: [...carrinho].map(([id, qtd]) => ({ id, qtd }))
             })
         });
+        const d = await r.json();
 
         if(!r.ok){
             throw new Error(d.erro);
         }
-        const d = await r.json();
 
 
         carrinho.clear();
