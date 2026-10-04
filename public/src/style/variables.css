@@ -1,0 +1,22 @@
+:root {
+    --tomate: #d62828;
+    --manjericao: #1f6f43;
+    --queijo: #ffc93c;
+    --masssa: #fffdf8;
+    --brasa: #24120c;
+    --borda: #e6dccb;
+    --fundo: #fffdf8;
+    --texto: #24120c;
+    --suave: #6b5a4e;
+    --card: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --fundo: #1c0f0a;
+        --texto: #fff3e0;
+        --suave: #c9b5a2;
+        --card: #2a1710;
+        --borda: #4a2f22;
+    }
+}
