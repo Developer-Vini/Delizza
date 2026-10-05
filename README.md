@@ -3,7 +3,7 @@
 Delizza is a simple web application for ordering pizzas online. Users can view the menu, add pizzas to a cart, enter their delivery information, and submit an order.
 
 ![Delizza Preview](public/assets/image.png)
-To test the application, access the online link: [https://delizza.onrender.com/](https://delizza-omega.vercel.app/)
+To test the application, access the online, link: (https://delizza-omega.vercel.app/)
 ## Technologies
 
 - HTML
